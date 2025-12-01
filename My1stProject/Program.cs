@@ -12,11 +12,12 @@ namespace My1stProject
                 db.Database.EnsureCreated(); // Create db if not exist
 
                 // Add user
-                db.Users.Add(new User { Name = "Fadila" });
+                db.Users.Add(new User { Name = "Aakif" });
                 db.SaveChanges();
 
                 // Read users
                 var users = db.Users.ToList();
+                Console.WriteLine("Users in database:");
                 foreach (var user in users)
                 {
                     Console.WriteLine($"Id: {user.Id}, Name: {user.Name}");
